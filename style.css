@@ -1,0 +1,85 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Abril Fatface', cursive;
+    background-color: #00165e;
+}
+h1{
+    color: #e3a000;
+    padding:20px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0px;
+    text-align: center;
+}
+#listOfCharacters {
+    padding: 0;
+    margin-top: 10px; 
+    display: grid;
+    grid-template: 175px;
+    grid-auto-rows: minmax(100px, auto); 
+    grid-gap: 20px;
+}
+.character{
+	list-style-type: none;
+	background-color:#e3a000;
+	border-radius: 4px; 
+    padding-top: 10px;
+    padding-left: 10px;
+	display: grid;
+	grid-template-columns: repeat minmax(2, 100px);
+	grid-template-areas: 
+	  'name image'
+	  'actor image'
+	  'house image';
+   color: #ffffff;
+}
+.character > h2{
+    font-size: 25px;
+    grid-area:name;
+    text-align:left;
+    padding-bottom: 10px;
+}
+.character > img{
+ max-height: 250px;
+ position: relative;
+ padding-top: 10px;
+ grid-area: house; 
+ margin: 0 275px;
+ padding-bottom: 20px;
+
+}
+.character > p {
+   grid-area: house;
+   font-size: 20px;
+   padding-bottom: 30px;
+   text-align: left; 
+   float: right;
+   color:#ffffff;
+}
+#userInput {
+    width: 50%;
+    height: 50px;
+    border-radius: 10px;
+    border: 4px solid #e3a000;
+    padding: 20px;
+    font-size: 20px;
+    background-color: #ffffff;
+    color: #00165e;
+}
+#searchCharacter {
+    position: relative;
+    padding-bottom: 20px;
+}
+#searchCharacter::after {
+    position: relative;
+    top: 3px;
+    right: 33px;
+}
